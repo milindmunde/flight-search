@@ -1,0 +1,116 @@
+@header-color: #0159a1;
+
+.main {
+  .header {
+    background:  @header-color;
+    padding: 1% 3%;
+    .cx {
+      margin-left: 40%;
+      font-size: 25px;
+      color: #249bd9;
+    }
+
+    .layalty {
+      color: #64a4d2;
+      font-size: 35px;
+    }
+    .nav-icon {
+      display: inline-block;
+    }
+    .nav-icon:after,
+    .nav-icon:before,
+    .nav-icon span {
+      background-color: #64a4d2;
+      border-radius: 3px;
+      content: '';
+      width: 40px;
+      display: block;
+      height: 4px;
+      margin: 5px 0;
+    }
+  }
+  .mat-tab-label {
+    font-weight: bold;
+    font-size: 20px;
+
+  }
+  .mat-tab-label-active {
+    border-bottom: 2px solid @header-color;
+    color: @header-color;
+  }
+  .flight-content {
+    padding: 1%;
+
+    .departure, .destination {
+      margin-top: 20px;
+    }
+  }
+  fieldset {
+    border: 2px groove #ddd;
+    border-radius: 5px;
+    legend {
+      width:auto;
+      border-bottom:none;
+      font-size: 16px;
+      margin-left: 2%;
+      padding: 0px 5px;
+    }
+    input {
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+      padding-bottom: 5px;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+  .returnDate, .departureDate, .travelers, .class-type {
+    width: 47%;
+    display: inline-block;
+    border-radius: 5px;
+    input {
+      border: none;
+      width: 100%;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+  .returnDate, .class-type {
+    margin-left: 5%;
+  }
+
+  .mat-select-value {
+    padding-left: 10px;
+    padding-bottom: 5px;
+  }
+  .btn-search {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background:  #01893f;
+    .btn-title {
+      color: white;
+      font-size: 20px;
+    }
+  }
+  .form-group {
+    margin-top: 20px;
+  }
+  .error-msg {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    .header {
+      background:  #0159a1;
+      padding: 2% 5%;
+      .cx {
+        margin-left: 25%;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<fieldset>
+  <legend>{{label}}</legend>
+      <input matInput class="src-airport"
+            [matAutocomplete]="auto"
+            [formControl]="selectedAirport">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let airport of filteredAirports | async" [value]="airport.name">
+          <span>{{airport.name}}</span>
+        </mat-option>
+      </mat-autocomplete>
+</fieldset>

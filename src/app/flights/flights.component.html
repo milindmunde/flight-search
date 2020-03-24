@@ -1,0 +1,50 @@
+<div class="main">
+  <div class="header">
+    <span class="back"><i class="material-icons back-icon" (click)="moveBack()">keyboard_backspace</i></span>
+    <span class="center">
+      <span class="content">
+        {{ flightList[0].src}}
+        <span class="material-icons arrow-icon">arrow_forward</span>
+        {{ flightList[0].dest}}
+      </span>
+      <span class="content-small">
+        {{ flightList[0].date}} | {{ flightList[0].count }}
+      </span>
+    </span>
+    <span class="edit"><i class="material-icons edit-icon" (click)="updateSearch()">edit</i></span>
+  </div>
+  <div class="flight-list">
+    <div class="flight-block" *ngFor="let item of flightList">
+      <div class="company">
+        <span class="material-icons flight-icon">flight</span>
+        <span class="title">{{item.company}}</span>
+      </div>
+      <div class="time">
+        <div class="dtime">
+          <div><b>{{ item.departTime }}</b></div>
+          <div>{{ item.src }}</div>
+        </div>
+        <div class="duration">
+          <div class="dlabel">{{ item.duration }}</div>
+          <div class="stop">{{ item.stop }}</div>
+        </div>
+        <div class="atime">
+          <div><b>{{ item.arrivalTime }}</b></div>
+          <div>{{ item.dest }}</div>
+        </div>
+      </div>
+      <div class="seat">
+        <button
+            class="btn-info">
+            <div>{{item.economy}}</div>
+            <div>Basic Economy</div>
+        </button>
+        <button
+            class="btn-info business">
+            <div>{{item.business}}</div>
+            <div>Business</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
